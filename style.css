@@ -1,0 +1,83 @@
+/* カメラ＆フレームを画面幅いっぱいに */
+#camera-container {
+  position: relative;
+  width: 100vw;
+  height: calc(100vw * 7 / 5); /* 幅に対して高さを5:7に固定 */
+  max-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  background: black;
+}
+
+#camera {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: black;
+}
+
+#frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* 撮影・切り替えボタン */
+#capture-area {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#capture,
+#switch-frame {
+  padding: 12px 20px;
+  font-size: 1.2em;
+  margin: 0 10px;
+}
+#capture {
+  background: #E40049;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  letter-spacing: 0.1em;
+}
+
+#switch-frame {
+  background: #0096BA;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  letter-spacing: 0.1em;	
+}
+
+/* プレビュー時の撮り直しボタン */
+#retake-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.large-btn {
+  font-size: 1.8em;
+  padding: 15px 30px;
+}
+
+#save-hint {
+  margin-top: 6px;
+  font-size: 0.9em;
+  color: #333;
+}
